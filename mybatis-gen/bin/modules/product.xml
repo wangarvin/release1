@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="/Users/martin/Documents/workspace/micar/mybatis-gen/lib/mybatis-generator-core-1.3.2.jar" />
+
+	<context id="micarTables" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MJavaFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root"
+			password="">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.micarshow.product.entity"
+			targetProject="/Users/martin/project/micar/codebase/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.product.mapper"
+			targetProject="/Users/martin/project/micar/codebase/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- ===========================TABLES============================= -->
+		<table schema="micar_dev" tableName="Product" domainObjectName="ProductEntity" />
+	</context>
+</generatorConfiguration>

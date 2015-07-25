@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="/home/sunkaige/working/projects/micarshow/code/mybatis-gen/lib/mybatis-generator-core-1.3.2.jar" />
+
+	<!-- 
+	<context id="Sequence" targetRuntime="MyBatis3Simple">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.core.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.core.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="SequenceDefault" domainObjectName="Sequence">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="SequenceId" sqlStatement="MySql" identity="true"/>
+		</table>
+	</context>
+ 	-->
+ 	
+	<context id="core" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.core.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.core.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="Area" domainObjectName="AreaEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CodeConst" domainObjectName="CodeConstEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Bulletin" domainObjectName="BulletinEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Feedback" domainObjectName="FeedbackEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Permission" domainObjectName="PermissionEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Role" domainObjectName="RoleEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="RolePermission" domainObjectName="RolePermissionEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="UserRole" domainObjectName="UserRoleEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="UserBasic" domainObjectName="UserBasicEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="UserFavorite" domainObjectName="UserFavoriteEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="UserLoginHistory" domainObjectName="UserLoginHistoryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Employee" domainObjectName="EmployeeEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+
+	<context id="customer" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.customer.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.customer.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="Customer" domainObjectName="CustomerEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CustomerAddress" domainObjectName="CustomerAddressEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CustomerAppointment" domainObjectName="CustomerAppointmentEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CustomerCar" domainObjectName="CustomerCarEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+
+	<context id="terminalStore" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.terminalstore.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.terminalstore.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="TerminalStore" domainObjectName="TerminalStoreEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="TerminalStoreUser" domainObjectName="TerminalStoreUserEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="TerminalStoreGallery" domainObjectName="TerminalStoreGalleryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="TerminalStoreDescription" domainObjectName="TerminalStoreDescriptionEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+
+	<context id="ServiceProvider" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.serviceprovider.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.serviceprovider.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="ServiceProvider" domainObjectName="ServiceProviderEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ServiceProviderUser" domainObjectName="ServiceProviderUserEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+	<context id="Manufacturer" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.manufacturer.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.manufacturer.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="Manufacturer" domainObjectName="ManufacturerEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ManufacturerUser" domainObjectName="ManufacturerUserEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+	
+	<context id="billing" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.billing.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.billing.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="BillingAccount" domainObjectName="BillingAccountEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="BillingFlow" domainObjectName="BillingFlowEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+
+	<context id="product" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.product.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.product.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="Category1" domainObjectName="Category1Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Category2" domainObjectName="Category2Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Category3" domainObjectName="Category3Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CategoryAttribute1" domainObjectName="CategoryAttribute1Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CategoryAttribute2" domainObjectName="CategoryAttribute2Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="CategoryAttribute2Option" domainObjectName="CategoryAttribute2OptionEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Brand" domainObjectName="BrandEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="BrandProductSeries" domainObjectName="BrandProductSeriesEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Product" domainObjectName="ProductEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ProductImage" domainObjectName="ProductImageEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ProductAttribute2" domainObjectName="ProductAttribute2Entity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ProductPrice" domainObjectName="ProductPriceEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="Inventory" domainObjectName="InventoryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="InventoryHistory" domainObjectName="InventoryHistoryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+	
+	<context id="saleorder" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.saleorder.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.saleorder.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="ShoppingCart" domainObjectName="ShoppingCartEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="ShoppingCartFlow" domainObjectName="ShoppingCartFlowEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="SaleOrder" domainObjectName="SaleOrderEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="SaleOrderItem" domainObjectName="SaleOrderItemEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table schema="micar_dev" tableName="SaleOrderStatusHistory" domainObjectName="SaleOrderStatusHistoryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+	</context>
+	
+		
+	<context id="ServiceProvider" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true"/>
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.serviceprovider.entity"
+			targetProject="D:/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.serviceprovider.mapper"
+			targetProject="D:/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="ServiceProvider" domainObjectName="ServiceProviderEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.micarshow.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="favorite" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter"/>
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/micar_dev" userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.micarshow.favorite.entity"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.micarshow.core.entity.BaseEntity"/>
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.micarshow.favorite.mapper"
+			targetProject="/home/sunkaige/working/projects/micarshow/code/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootInterface" value="com.micarshow.core.mapper.BaseMapper" /> 
+		</javaClientGenerator>
+
+		<table schema="micar_dev" tableName="Favorite" domainObjectName="FavoriteEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.micarshow.core.enums.Status" />
+			<columnOverride column="extType" javaType="com.micarshow.favorite.enums.FavoriteExtType" />
+		</table>
+	</context>
+	
+</generatorConfiguration>

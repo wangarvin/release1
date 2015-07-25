@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="/home/sunkaige/working/projects/weizhen/mybatis-gen/lib/mybatis-generator-core-1.3.2.jar" />
+
+	<context id="core" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.core.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.core.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="Area" domainObjectName="AreaEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+
+		<table schema="weizhen" tableName="Picture" domainObjectName="PictureEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="extType" javaType="com.sudao.weizhen.picture.enums.PictureExtType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="Message" domainObjectName="MessageEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="msgType" javaType="com.sudao.weizhen.core.enums.MsgType" />
+			<columnOverride column="msgStatus" javaType="com.sudao.weizhen.core.enums.MsgStatus" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="SmsHistory" domainObjectName="SmsHistoryEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="smsStatus" javaType="com.sudao.weizhen.core.enums.SmsStatus" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="Article" domainObjectName="ArticleEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="articleType" javaType="com.sudao.weizhen.core.enums.ArticleType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+
+	<context id="user" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.user.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.user.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="User" domainObjectName="UserEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="Gender" javaType="com.sudao.weizhen.core.enums.Gender" />
+			<columnOverride column="AgentLevel" javaType="com.sudao.weizhen.user.enums.AgentLevel" />
+			<columnOverride column="PublisherLevel" javaType="com.sudao.weizhen.user.enums.PublisherLevel" />
+			<columnOverride column="UserStatus"
+				javaType="com.sudao.weizhen.core.enums.UserStatus" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+
+		<table schema="weizhen" tableName="LoginHistory"
+			domainObjectName="LoginHistoryEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+		<table schema="weizhen" tableName="LastLogin" domainObjectName="LastLoginEntity">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="weizhen" tableName="InviteCodeAgent" domainObjectName="InviteCodeAgentEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+
+	<context id="product" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.product.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.product.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="Product" domainObjectName="ProductEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="productType" javaType="com.sudao.weizhen.product.enums.ProductType" />
+			<columnOverride column="productSaleType" javaType="com.sudao.weizhen.product.enums.ProductSaleType" />
+			<columnOverride column="productStatus" javaType="com.sudao.weizhen.product.enums.ProductStatus" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="ProductSpec" domainObjectName="ProductSpecEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="ProductAgent" domainObjectName="ProductAgentEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="Brand" domainObjectName="BrandEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="DeliveryPrice" domainObjectName="DeliveryPriceEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="UserProductMapping" domainObjectName="UserProductMappingEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="relationship" javaType="com.sudao.weizhen.product.enums.UserProductRelationshipType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="saleorder" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.saleorder.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.saleorder.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="SaleOrder" domainObjectName="SaleOrderEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="saleOrderStatus" javaType="com.sudao.weizhen.saleorder.enums.SaleOrderStatus" />
+			<columnOverride column="invoicePayer" javaType="com.sudao.weizhen.saleorder.enums.InvoicePayer" />
+			<columnOverride column="invoiceType" javaType="com.sudao.weizhen.saleorder.enums.InvoiceType" />
+			<columnOverride column="invoiceTaxType" javaType="com.sudao.weizhen.saleorder.enums.InvoiceTaxType" />
+			<columnOverride column="productSaleType" javaType="com.sudao.weizhen.product.enums.ProductSaleType" />
+			<columnOverride column="productType" javaType="com.sudao.weizhen.product.enums.ProductType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="Shipping" domainObjectName="ShippingEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="ReceiveAddress" domainObjectName="ReceiveAddressEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="ShippingCompany" domainObjectName="ShippingCompanyEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="shoppingcart" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.shoppingcart.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.shoppingcart.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="ShoppingCart" domainObjectName="ShoppingCartEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="group" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.group.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.group.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="Group" domainObjectName="GroupEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="memberVisibilityType" javaType="com.sudao.weizhen.group.enums.MemberVisibilityType" />
+			<columnOverride column="joinVerificationType" javaType="com.sudao.weizhen.group.enums.JoinVerificationType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="GroupUser" domainObjectName="GroupUserEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="stats" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.stats.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.stats.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="MyPocketStats" domainObjectName="MyPocketStatsEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="MyProductStats" domainObjectName="MyProductStatsEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+		
+		<table schema="weizhen" tableName="MySaleOrderStats" domainObjectName="MySaleOrderStatsEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+	
+	<context id="payment" targetRuntime="MyBatis3">
+		<property name="javaFormatter" value="util.MyFormatter" />
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/weizhen" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.sudao.weizhen.payment.entity"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaModelGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.sudao.weizhen.payment.mapper"
+			targetProject="/home/sunkaige/working/projects/weizhen/platform/src/gen/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootClass" value="com.sudao.weizhen.core.entity.BaseEntity" />
+		</javaClientGenerator>
+
+		<table schema="weizhen" tableName="PaymentBook" domainObjectName="PaymentBookEntity">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="paymentEvent" javaType="com.sudao.weizhen.payment.enums.PaymentEventType" />
+			<columnOverride column="extType" javaType="com.sudao.weizhen.payment.enums.PaymentExtType" />
+			<columnOverride column="status" javaType="com.sudao.weizhen.core.enums.Status" />
+		</table>
+	</context>
+</generatorConfiguration>
